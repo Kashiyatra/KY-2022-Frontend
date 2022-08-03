@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Round&display=swap");
+
+body {
+  text-align: center;
+  cursor: url(../SVG/cursor.svg), auto;
+}
+
+body > img {
+  margin-bottom: 20vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+header .name {
+  color: white;
+}
+@font-face {
+  font-family: "Nova Round";
+  src: url("../fonts/NovaRound.woff2") format("woff2"),
+    url("../fonts/NovaRound-Regular.ttf") format("truetype"),
+    url("../fonts/NovaRound.woff") format("woff");
+}
+@font-face {
+  font-family: "dehors";
+  src: url("../fonts/dehors/dehors.ttf");
+}
+.nova {
+  font-family: "Nova Round";
+}
+.dehors {
+  font-family: "dehors";
+}
+.BG {
+  background-image: url("../SVG/bgoverlay.svg");
+
+  background-repeat: repeat;
+}
+.rotated {
+  transform: rotate(-180deg);
+}
+.stylers {
+  width: 75px;
+}
+.Elem {
+  aspect-ratio: 12 / 9;
+
+  width: 100%;
+  border: 5px solid;
+  /* border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;*/
+  border-image-source: url("../SVG/img_border.svg");
+  -moz-border-image: url("../SVG/img_border.svg");
+  -webkit-border-image: url("../SVG/img_border.svg");
+  -o-border-image: url("../SVG/img_border.svg");
+  border-image-slice: 7%;
+  border-image-width: 20px;
+}
+.modal-target {
+  cursor: pointer;
+}
+
+.modal-target:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #53081c;
+  background-image: url("../SVG/bgoverlay.svg");
+
+  background-repeat: repeat;
+
+  /*background-color: rgb(0, 0, 0); /* Fallback color */
+  /*background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+@media screen and (orientation: portrait) {
+  .stylers {
+    width: 50px;
+  }
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  aspect-ratio: 1/1;
+  border-radius: 4%;
+  max-width: 500px;
+  width: 80%;
+  outline: medium #fff solid;
+
+  opacity: 1 !important;
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+}
+.xx {
+  aspect-ratio: 1/1;
+  border-radius: 4%;
+  max-width: 300px;
+  outline: medium #fff solid;
+}
+
+/* Add Animation */
+.modal-content,
+.modal-caption,
+.modal-title {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-atransform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.BG {
+  background-image: url("../SVG/bgoverlay.svg");
+  background-color: #53081c;
+}
+
+/* The Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

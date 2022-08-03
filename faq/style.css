@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "dehors";
+  src: url("../fonts/dehors/dehors-webfont.woff2") format("woff2"),
+    url("../fonts/dehors/dehors.ttf") format("truetype"),
+    url("../fonts/dehors/dehors-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "dehors";
+  background-color: #501b59;
+  background-image: url("../SVG/bgoverlay.svg");
+  background-repeat: repeat;
+  color: #fff;
+  height: 100vh;
+  cursor: url(../SVG/cursor.svg), auto;
+}
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.accordion {
+  width: 90%;
+  max-width: 1260px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  background: rgba(200, 200, 200, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  font-family: "Nova Round", cursive;
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  font-family: "Nova Round", cursive;
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-image: linear-gradient(to right, transparent, transparent, transparent)
+    1;
+}
+.tags {
+  display: flex;
+  justify-content: center;
+}
+.heading {
+  white-space: nowrap;
+  font-size: 2.5vw;
+  padding: 10px 20px;
+}
+.heading a {
+  text-decoration: none;
+  color: white;
+}
+.title {
+  width: 90%;
+  max-width: 1260px;
+  margin: 2rem auto;
+  font-size: 40px;
+}
+.container {
+  animation: drop 1s ease-in-out;
+  padding: 10px;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.header {
+  position: static;
+  width: 100%;
+}
+
+.headings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+}
+.headings h1 {
+  margin-left: 10px;
+  font-size: 50px;
+  margin-right: 10px;
+  color: #fff;
+}
+.stylers {
+  width: 50px;
+}
+.rotated {
+  transform: rotate(-180deg);
+}
+
+.logo {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px 25px;
+}
+
+.heading .active {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+@media screen and (orientation: portrait) {
+  div {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .heading {
+    font-size: 4vw;
+  }
+  .headings h1 {
+    font-size: 40px;
+  }
+}

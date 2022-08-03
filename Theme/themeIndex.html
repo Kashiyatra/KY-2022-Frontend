@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="aframe.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="themestyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Permanent+Marker&family=Press+Start+2P&family=Ubuntu+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <title>Kashiyatra | Theme</title>
+    <!-- Preloader -->
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"
+    />
+    <link rel="stylesheet" href="../css/loading-bar.css" />
+    <script type="text/javascript">
+      paceOptions = {
+        className: "preloadthing",
+      };
+    </script>
+  </head>
+
+  <body class="background cursor1">
+    <div class="preloadthing">
+      <div class="giflogo">
+        <img
+          src="https://c.tenor.com/icFIJZnyfwYAAAAC/circle-hoop.gif"
+          height="100px"
+          width="100px"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="row cursors"></div>
+    <div class="header">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../SVG/Logo.svg" width="28px" />
+        </a>
+      </div>
+
+      <div class="loginicon">
+        <a href="#login">
+          <img src="../SVG/Login.svg" width="28px" />
+        </a>
+      </div>
+    </div>
+
+    <section id="home">
+      <div id="addclass"></div>
+
+      <div class="textcandle">
+        <div class="m-[2%] p-[40px] relative themeh">
+          <h1
+            class="text-[52px] lg:text-[60px] left-[64px] xl:text-[96px] sm:left-[144px] absolute hot samarkan h-4/6 sm:top-[16px] lg:left-[144px] lg:px-[8px] text-[#FB3C5E] cultural"
+          >
+            A Cultural Resurgence
+          </h1>
+          <h4
+            id="hello"
+            class="hidden xl:hover:block bg-black h-[85px] px-[8px] absolute hover:z-10 -top-0 w-[600px] hex text-[36px] xl:text-[60px] lg:left-[144px] whitespace-nowrap ext clipper text-[#FB3C5E] kruti"
+          >
+            ,d lkaLfrd&nbsp;&nbsp; iqu#RFkku
+          </h4>
+
+          <h1
+            class="-left-[12px] relative top-[64px] lg:top-[40px] text-[32px] whitespace-nowrap sm:top-[40px] sm:left-[96px] xl:top-[100px] samarkan lg:left-[112px] xl:left-[112px] text-white themename"
+          >
+            THEME
+          </h1>
+        </div>
+        <div class="themetext">
+          <p class="themep">
+            The Pandemic may have brought our world to a standstill. Time came
+            to a stop and motion ceased. Now, as the world recovers, it comes
+            back stronger and more alive than ever. Kashiyatra presents before
+            you a Cultural Resurgence — a celebration of the rebound of Culture
+            in its unique styles and hues.<span class="themehalftext">
+              With a myriad of events and artists, this year Kashiyatra
+              celebrates the undying Culture that unites us and keeps us
+              enthralled.</span
+            >
+          </p>
+        </div>
+        <div class="textforportrait">
+          <h3>A Cultural Resurgence</h3>
+        </div>
+        <div class="candle" id="test">
+          <a-scene
+            device-orientation-permission-ui="enabled: false"
+            vr-mode-ui="enabled: false"
+            class="aframebox"
+            embedded
+            renderer="colorManagement: true"
+          >
+            <a-assets>
+              <a-asset-item
+                id="candle"
+                src="../model/mandala.gltf"
+              ></a-asset-item>
+            </a-assets>
+
+            <a-entity
+              id="camera"
+              camera="fov: 80; zoom: 1.25;"
+              position="0 2 5"
+              orbit-controls="
+                  autoRotate: false;
+                  enableZoom: false;
+                  target: #target;
+                  minPolarAngle: 0;
+                  maxPolarAngle:0;
+                  enableDamping: true;
+                  dampingFactor: 0.125;
+                  rotateSpeed:0.25;
+                  minDistance:6;
+                  maxDistance:100;
+                  "
+              mouse-cursor=""
+            >
+              <a-entity
+                geometry="primitive:cone; radius-bottom:1; radius-top:0"
+                scale=".33 1 .33"
+                position="0 0 0"
+                rotation="90 0 0"
+                material="color: #0099ff; transparent: true; opacity:0.5"
+              >
+              </a-entity>
+            </a-entity>
+            <a-entity
+              light="type: ambient; color: #fff ; intensity:0.7"
+            ></a-entity>
+
+            <a-entity position="0 0.1 0" id="target">
+              <a-entity
+                gltf-model="#candle"
+                animation-mixer="timeScale:0.2"
+                scale="3 3 3"
+                position="0 0 0"
+              ></a-entity>
+            </a-entity>
+          </a-scene>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"
+    ></script>
+    <script src="../js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "dehors";
+  src: url("../fonts/dehors/dehors-webfont.woff2") format("woff2"),
+    url("../fonts/dehors/dehors.ttf") format("truetype"),
+    url("../fonts/dehors/dehors-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nova";
+
+  src: url("../fonts/NovaRound-Regular.ttf");
+}
+body {
+  font-family: "dehors";
+  background-color: #360774;
+  background-image: url("../SVG/bgoverlay.svg");
+  background-repeat: repeat;
+  color: #fff;
+  height: 100vh;
+  cursor: url(../SVG/cursor.svg), auto;
+}
+
+.header {
+  position: static;
+  width: 100%;
+}
+
+.headings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+}
+.headings h1 {
+  margin-left: 10px;
+  font-size: 50px;
+  margin-right: 10px;
+  color: #fff;
+  font-family:"dehors" ;
+}
+.stylers {
+  width: 50px;
+}
+.rotated {
+  transform: rotate(-180deg);
+}
+
+h1{
+  text-align: center;
+  margin: 30px 0px;
+  font-family: "Nova";
+}
+
+.logo {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 25px 25px;
+}
+
+.heading .active {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  margin: 1% 10%;
+  font-family: "Nova";
+}
+.container1{
+  grid-template-columns: auto;
+}
+.container2{
+  grid-template-columns: auto;
+}
+.container3{
+  grid-template-columns: auto auto;
+}
+.container4{
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .container4{
+    grid-template-columns: auto auto ;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container4{
+    grid-template-columns: auto  ;
+  }
+  .container3{
+    grid-template-columns: auto;
+  }
+}
+
+
+@media screen and (orientation: portrait) {
+  div {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .heading {
+    font-size: 4vw;
+  }
+  .headings h1 {
+    font-size: 35px;
+  }
+  
+.logo {
+  width: 40px;
+  margin: 16px;
+}
+
+}

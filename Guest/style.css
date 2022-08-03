@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Round&display=swap");
+
+body {
+  text-align: center;
+  cursor: url(../SVG/cursor.svg), auto;
+}
+
+body > img {
+  margin-bottom: 20vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+header .name {
+  color: white;
+}
+@font-face {
+  font-family: "Nova Round";
+  src: url("../fonts/NovaRound.woff2") format("woff2"),
+    url("../fonts/NovaRound-Regular.ttf") format("truetype"),
+    url("../fonts/NovaRound.woff") format("woff");
+}
+@font-face {
+  font-family: "dehors";
+  src: url("../fonts/dehors/dehors.ttf");
+}
+.nova {
+  font-family: "Nova Round";
+}
+.dehors {
+  font-family: "dehors";
+}
+.BG {
+  background-image: url("../SVG/bgoverlay.svg");
+
+  background-repeat: repeat;
+}
+.rotated {
+  transform: rotate(-180deg);
+}
+.stylers {
+  width: 75px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+.portfolio {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  min-width: 320px;
+}
+
+.portfolio h2 {
+  flex-basis: 100%;
+  text-align: center;
+  margin: 50px auto 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #111;
+}
+.card {
+  border-radius: 5%;
+  margin: 20px;
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+  border: 4px solid;
+  border-image-source: url("../SVG/img_border.svg");
+  -moz-border-image: url("../SVG/img_border.svg");
+  -webkit-border-image: url("../SVG/img_border.svg");
+  -o-border-image: url("../SVG/img_border.svg");
+  border-image-slice: 7%;
+  border-image-width: 20px;
+}
+.card .content {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-height: 100px;
+  background: #111;
+}
+.card .image {
+  z-index: 1;
+  height: 100%;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1.2);
+}
+
+.card:hover .content {
+  bottom: 0;
+  color: #fff;
+}
+
+.card:hover .image img {
+  transform: scale(1);
+}
+
+.card .content span:first-child {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+.card .content span:last-child {
+  font-size: 14px;
+  color: #18cfab;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 60%;
+  }
+  .card .content {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+@media screen and (orientation: portrait) {
+  .stylers {
+    width: 50px;
+  }
+}
