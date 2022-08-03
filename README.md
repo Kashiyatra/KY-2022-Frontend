@@ -1,13 +1,14 @@
 # KY-2022-Frontend
 
 Kashiyatra frontend website for the year 2022.
-https://kashiyatra-2022.netlify.app
+[Link](https://kashiyatra-2022.netlify.app)
 
 ## Features
 
 - 3D model(using aFrame)
 - Lens(English<=>Hindi)
 - Liquid carousel
+- Skew Image Scroll [(Link)](https://kashiyatra-2022.netlify.app/events)
 
 ## Tech Stack
 
