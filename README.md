@@ -6,6 +6,10 @@ Kashiyatra frontend website for the year 2022.
 ## Features
 
 - 3D model(using aFrame)
+  - We have implemented 3D model using Aframe.
+  - Aframe [Docs](https://aframe.io/docs/1.3.0/introduction/models.html)
+  - Refer this [Repo](https://github.com/yashrajbharti/candle-light) for base code.
+  - From [here](https://sketchfab.com/) you can download any 3D model.
 - Lens(English<=>Hindi)
 - Liquid carousel
 - Skew Image Scroll [(Link)](https://kashiyatra-2022.netlify.app/events)
